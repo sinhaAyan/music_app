@@ -7,7 +7,7 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-    console.log(action);
+    //console.log(action);
     //  action contains -> type, [payload] 
     switch (action.type) {
 
@@ -21,6 +21,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 token: action.token,
+            }
+        case 'SET_PLAYLISTS':
+            return {
+                ...state,
+                playlists: action.playlists,
             }
 
         default:
